@@ -16,7 +16,7 @@
 
     </div>
 
-    <div class="mx-5 my-5">
+    <div class="mx-5 mt-10">
       <v-row class="align-start justify-center" >
 
         <v-col  class="flex-grow-1 flex-shrink-0 pa-10" style="  min-width: 310px;">
@@ -48,17 +48,25 @@
 
     </div>
 
-    <div class="mx-5 my-5">
-      <v-row class="align-start justify-start" >
+    <div class="mx-5">
+      <v-row class="align-start justify-center" >
 
-        <v-col  class="flex-grow-1 flex-shrink-0 pa-10" style=" max-width: 400px; min-width: 310px;">
+        <v-col class="flex-grow-1 flex-shrink-0 pa-10" style="min-width: 310px;">
             <h2 class="font-weight-bold deep-orange--text text--lighten-2 text-center text-sm-left" >EDUCATION</h2>
             <p class=" mt-5 white--text  text-center text-sm-left" >B.Sc. in computer engineering at Amirkabir university of technology.</p> 
         </v-col>
 
+        <v-col style=" max-width: 400px; min-width: 310px;"></v-col>
+
       </v-row>
 
     </div>
+
+    <div class="mx-13 my-10">
+      <h2 class="font-weight-bold deep-orange--text text--lighten-2 text-center text-sm-left " >PROGRAMMING LANGUAGES/SKILSS</h2>
+      <bar-chart class="white--text mx-5 mt-10 "></bar-chart>
+    </div>
+    
 
 
 
@@ -136,9 +144,14 @@
 </template>
 
 <script>
-export default {
-  name: "Resume",
+import BarChart from '../components/BarChart.vue'
 
+export default {
+
+  name: "Resume",
+  components: {
+    BarChart
+  },
   data: () => ({
     ecosystem: [
       {
