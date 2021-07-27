@@ -4,17 +4,63 @@
     <div class="deep-orange lighten-2 px-16">
       <v-row class="align-center justify-center py-5">
       
-        <v-col cols="3" class="flex-grow-1 flex-shrink-0" style="  min-width: 150px;">
-          <v-img style="border: 3px solid #1A237E;" class="rounded-circle pa-16"  max-height="150" max-width="150" :src="require('../assets/zeynab.jpg')"></v-img>
+        <v-col class="flex-grow-0 flex-shrink-0" >
+          <v-img style="border: 3px solid #1A237E;" class="rounded-circle pa-16" min-width="150" max-height="150" max-width="150" :src="require('../assets/zeynab.jpg')"></v-img>
         </v-col>
 
-        <v-col cols="9" class="flex-grow-1 flex-shrink-1 ">
+        <v-col  class="flex-grow-1 flex-shrink-0 " style="max-width: 600px; min-width: 310px;">
             <h1  class="font-weight-bold white--text text-center text-sm-left text-sm-h3" >ZEYNAB HEYDARZADEH</h1>
             <h4 class="font-weight-bold mt-5 indigo--text text--darken-4 text-center text-sm-left text-sm-h6" >B.SC. STUDENT IN COMPUTER ENGINEERING</h4>
         </v-col>
       </v-row>
 
     </div>
+
+    <div class="mx-5 my-5">
+      <v-row class="align-start justify-center" >
+
+        <v-col  class="flex-grow-1 flex-shrink-0 pa-10" style="  min-width: 310px;">
+            <h2 class="font-weight-bold deep-orange--text text--lighten-2 text-center text-sm-left" >PROFILE</h2>
+            <p class=" mt-5 white--text  text-center text-sm-left" >I am an enthusiastic, responsible and hard working person. I am able to work well both in a team environment as well as using own initiative.</p> 
+        </v-col>
+
+        <v-col  class="flex-grow-1 flex-shrink-0 pa-10" style="  min-width: 400px;">
+            <h2 class="font-weight-bold deep-orange--text text--lighten-2 text-center text-sm-left pb-5" >CONTACT</h2>
+            <v-row class="align-start justify-center justify-sm-start ml-sm-1 " >
+              <v-icon color="deep-orange lighten-2 "> mdi-phone </v-icon>
+              <p class=" white--text  text-center text-sm-left pl-2" >09156417902</p>
+            </v-row>
+            <v-row class="align-start justify-center justify-sm-start  ml-sm-1" >
+              <v-icon color="deep-orange lighten-2"> mdi-map-marker </v-icon>
+              <p class=" white--text  text-center text-sm-left pl-2" >Tehran, Hoseynmardi ST, Dorist APT</p>
+            </v-row>
+            <v-row class="align-start justify-center justify-sm-start  ml-sm-1" >
+              <v-icon color="deep-orange lighten-2"> mdi-gmail </v-icon>
+              <p class=" white--text  text-center text-sm-left pl-2" >zeinabheidarzadeh1377@gmail.com</p>
+            </v-row>
+            <v-row class="align-start justify-center justify-sm-start  ml-sm-1" >
+              <v-icon color="deep-orange lighten-2 "> mdi-linkedin </v-icon>
+              <p class=" white--text  text-center text-sm-left pl-2" >@zeinabHeidarzadeh</p>
+            </v-row>
+        </v-col>
+
+      </v-row>
+
+    </div>
+
+    <div class="mx-5 my-5">
+      <v-row class="align-start justify-start" >
+
+        <v-col  class="flex-grow-1 flex-shrink-0 pa-10" style=" max-width: 400px; min-width: 310px;">
+            <h2 class="font-weight-bold deep-orange--text text--lighten-2 text-center text-sm-left" >EDUCATION</h2>
+            <p class=" mt-5 white--text  text-center text-sm-left" >B.Sc. in computer engineering at Amirkabir university of technology.</p> 
+        </v-col>
+
+      </v-row>
+
+    </div>
+
+
 
     <!-- <v-row class="text-center">
       <v-col cols="12">
