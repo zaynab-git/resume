@@ -1,6 +1,22 @@
 <template>
-  <v-container>
-    <v-row class="text-center">
+  <v-container class=" indigo darken-4 px-0 pt-10  ">
+
+    <div class="deep-orange lighten-2 px-16">
+      <v-row class="align-center justify-center py-5">
+      
+        <v-col cols="3" class="flex-grow-1 flex-shrink-0" style="  min-width: 150px;">
+          <v-img style="border: 3px solid #1A237E;" class="rounded-circle pa-16"  max-height="150" max-width="150" :src="require('../assets/zeynab.jpg')"></v-img>
+        </v-col>
+
+        <v-col cols="9" class="flex-grow-1 flex-shrink-1 ">
+            <h1  class="font-weight-bold white--text text-center text-sm-left text-sm-h3" >ZEYNAB HEYDARZADEH</h1>
+            <h4 class="font-weight-bold mt-5 indigo--text text--darken-4 text-center text-sm-left text-sm-h6" >B.SC. STUDENT IN COMPUTER ENGINEERING</h4>
+        </v-col>
+      </v-row>
+
+    </div>
+
+    <!-- <v-row class="text-center">
       <v-col cols="12">
         <v-img
           :src="require('../assets/logo.svg')"
@@ -69,13 +85,13 @@
           </a>
         </v-row>
       </v-col>
-    </v-row>
+    </v-row> -->
   </v-container>
 </template>
 
 <script>
 export default {
-  name: "HelloWorld",
+  name: "Resume",
 
   data: () => ({
     ecosystem: [
