@@ -65,7 +65,7 @@
     <div class="mx-13 my-10">
       <h2 class="font-weight-bold deep-orange--text text--lighten-2 text-center text-sm-left " >PROGRAMMING LANGUAGES/SKILSS</h2>
       <button class="deep-orange lighten-2  px-3 py-1 indigo--text text--darken-4 my-5 " @click="randomize()">Randomize The Bar Chart Numbers</button>
-      <bar-chart :ChartData = "ChartData"  class="white--text mx-5 mt-10 "></bar-chart>
+      <bar-chart :chartData = "chartData" :options = "options"  class="white--text mx-5 mt-10 "></bar-chart>
     </div>
     
   </v-container>
@@ -80,28 +80,56 @@ export default {
   components: {
     BarChart
   },
+
   data: () => ({
-     ChartData: {
-     "HTML": 12,
-     "CSS": 12,
-     "JavaScript": 6,
-     "React/Redux": 6,
-     "SQL": 12,
-     "python": 12,
-     "C": 6,
-     "java": 12,
-     "BootStrap": 6,
-     "Git": 6}
-   }),
+    chartData: {
+          labels: ["HTML", "CSS", "JavaScript", "React/Redux", "SQL", "python", "C", "java", "BootStrap","Git"],
+          
+          datasets: [{
+            label: 'Bar Chart',
+            borderWidth: 1,
+            backgroundColor: "#FF8A65",
+            borderColor: "#FF8A65",
+            pointBorderColor: '#FF8A65',
+            data: [12,12,6,6,12,12,6,12,6,6],
+          }]
+        },
+
+        options: {
+          scales: {
+            yAxes: [{
+              ticks: {
+                beginAtZero: true
+              },
+              gridLines: {
+                display: false
+              }
+            }],
+            xAxes: [{
+              gridLines: {
+                display: false
+              }
+            }]
+          },
+          legend: {
+            display: false
+          },
+          responsive: true,
+          maintainAspectRatio: false
+        }
+      }
+    ),
+
 
   methods : {
     randomize: function(){
-      for (let item in this.ChartData) {
-        this.ChartData[item] = Math.floor(Math.random() * 12)
-        // console.log(this.ChartData[item])
+      for (let item in this.chartData.datasets[0].data) {
+        this.chartData.datasets[0].data[item] = Math.floor(Math.random() * 12)
+        console.log(this.chartData.datasets[0].data[item])
       }
-    }
-  }
+    },
+
+}
 
 };
 </script>
