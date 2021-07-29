@@ -1,9 +1,9 @@
 
-
 <script>
   import { Bar } from 'vue-chartjs'
   export default {
     extends: Bar,
+    props: ['ChartData'],
     data() {
       return {
         chartData: {
@@ -15,9 +15,19 @@
             backgroundColor: "#FF8A65",
             borderColor: "#FF8A65",
             pointBorderColor: '#FF8A65',
-            data: [12, 12, 6, 6, 12, 12, 6, 12, 6, 6]
+            data: [this.ChartData.HTML,
+            this.ChartData.CSS,
+            this.ChartData.JavaScript,
+            this.ChartData["React/Redux"],
+            this.ChartData.SQL,
+            this.ChartData.python,
+            this.ChartData.C,
+            this.ChartData.java,
+            this.ChartData.BootStrap,
+            this.ChartData.Git],
           }]
         },
+
         options: {
           scales: {
             yAxes: [{
@@ -43,7 +53,9 @@
       }
     },
     mounted() {
-      this.renderChart(this.chartData, this.options)
-    }
+      this.renderChart(this.chartData, this.options);
+    },
+    
+    
   }
 </script>

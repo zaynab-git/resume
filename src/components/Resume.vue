@@ -64,7 +64,8 @@
 
     <div class="mx-13 my-10">
       <h2 class="font-weight-bold deep-orange--text text--lighten-2 text-center text-sm-left " >PROGRAMMING LANGUAGES/SKILSS</h2>
-      <bar-chart class="white--text mx-5 mt-10 "></bar-chart>
+      <button class="deep-orange lighten-2  px-3 py-1 indigo--text text--darken-4 my-5 " @click="randomize()">Randomize The Bar Chart Numbers</button>
+      <bar-chart :ChartData = "ChartData"  class="white--text mx-5 mt-10 "></bar-chart>
     </div>
     
   </v-container>
@@ -79,7 +80,28 @@ export default {
   components: {
     BarChart
   },
-  // data: () => ({
-    
+  data: () => ({
+     ChartData: {
+     "HTML": 12,
+     "CSS": 12,
+     "JavaScript": 6,
+     "React/Redux": 6,
+     "SQL": 12,
+     "python": 12,
+     "C": 6,
+     "java": 12,
+     "BootStrap": 6,
+     "Git": 6}
+   }),
+
+  methods : {
+    randomize: function(){
+      for (let item in this.ChartData) {
+        this.ChartData[item] = Math.floor(Math.random() * 12)
+        // console.log(this.ChartData[item])
+      }
+    }
+  }
+
 };
 </script>
