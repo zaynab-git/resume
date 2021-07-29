@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>hi, this home page</h1>
+    <h1>hi, this is about page</h1>
   </div>
   
 </template>
@@ -9,10 +9,10 @@
 //  import Resume from "../components/Resume";
 
 export default {
-  name: "Home",
-  // components: {
-  //   Resume,
+  name: "About",
+//   components: {
+//     Resume,
 
-  // },
+//   },
 };
 </script>

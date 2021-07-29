@@ -28,19 +28,19 @@
             <h2 class="font-weight-bold deep-orange--text text--lighten-2 text-center text-sm-left pb-5" >CONTACT</h2>
             <v-row class="align-start justify-center justify-sm-start ml-sm-1 " >
               <v-icon color="deep-orange lighten-2 "> mdi-phone </v-icon>
-              <p class=" white--text  text-center text-sm-left pl-2" >09156417902</p>
+              <p class=" white--text  text-center text-sm-left pl-2" >my-phone-number</p>
             </v-row>
             <v-row class="align-start justify-center justify-sm-start  ml-sm-1" >
               <v-icon color="deep-orange lighten-2"> mdi-map-marker </v-icon>
-              <p class=" white--text  text-center text-sm-left pl-2" >Tehran, Hoseynmardi ST, Dorist APT</p>
+              <p class=" white--text  text-center text-sm-left pl-2" >my-address</p>
             </v-row>
             <v-row class="align-start justify-center justify-sm-start  ml-sm-1" >
               <v-icon color="deep-orange lighten-2"> mdi-gmail </v-icon>
-              <p class=" white--text  text-center text-sm-left pl-2" >zeinabheidarzadeh1377@gmail.com</p>
+              <p class=" white--text  text-center text-sm-left pl-2" >my-email@gmail.com</p>
             </v-row>
             <v-row class="align-start justify-center justify-sm-start  ml-sm-1" >
               <v-icon color="deep-orange lighten-2 "> mdi-linkedin </v-icon>
-              <p class=" white--text  text-center text-sm-left pl-2" >@zeinabHeidarzadeh</p>
+              <p class=" white--text  text-center text-sm-left pl-2" >@my-linkdin</p>
             </v-row>
         </v-col>
 
