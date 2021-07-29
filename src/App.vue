@@ -1,7 +1,12 @@
 <template>
   <v-app>
+    <div class=" d-flex align-center justify-center grey lighten-2">
+      <router-link class="pa-5" to="/">Home</router-link>
+      <router-link class="pa-5" to="/about">About</router-link>
+
+    </div>
   
-    <v-main  class="grey darken-3">
+    <v-main  >
       <router-view />
     </v-main>
     

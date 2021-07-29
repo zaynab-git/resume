@@ -1,18 +1,14 @@
 <template>
   <div>
-    <h1>hi, this home page</h1>
+    <h1 class="d-flex justify-center pa-5">this is home page</h1>
   </div>
   
 </template>
 
 <script>
-//  import Resume from "../components/Resume";
+
 
 export default {
-  name: "Home",
-  // components: {
-  //   Resume,
-
-  // },
+  name: "Home"
 };
 </script>
