@@ -1,7 +1,3 @@
-<template>
-  <h1>{{chartData}}</h1>
-</template>
-
 <script>
   import { Bar, mixins } from 'vue-chartjs'
   export default {
