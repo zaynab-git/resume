@@ -131,7 +131,7 @@
       </button>
       <bar-chart
         ref="bar"
-        :chartData="chartDataSet"
+        :chartData="computedData"
         :options="options"
         class="white--text mx-5 mt-10"
       ></bar-chart>
@@ -144,39 +144,26 @@ import BarChart from "../components/BarChart.vue";
 
 export default {
   name: "Resume",
-  props: ["name","image","chartDataSet","major","profile","education"],
+  props: ["name","image","major","profile","education"],
   components: {
     BarChart,
   },
   data: () => ({
-    
 
-    // chartData:{
-    //     labels: [
-    //       "HTML",
-    //       "CSS",
-    //       "JavaScript",
-    //       "React/Redux",
-    //       "SQL",
-    //       "python",
-    //       "C",
-    //       "java",
-    //       "BootStrap",
-    //       "Git",
-    //     ],
+    chartDataSet: {
+        HTML: 3,
+        CSS: 4,
+        JavaScript: 5,
+        "React/Redux": 7,
+        SQL: 1,
+        python: 12,
+        C: 5,
+        java: 2,
+        BootStrap: 8,
+        Git: 6,
+      },
 
-    //     datasets: [
-    //       {
-    //         label: "Bar Chart",
-    //         borderWidth: 1,
-    //         backgroundColor: "#FF8A65",
-    //         borderColor: "#FF8A65",
-    //         pointBorderColor: "#FF8A65",
-    //         data: [12,12,6,6,12,12,6,6,12,6,6
-    //         ],
-    //       },
-    //     ],
-    //   },
+
       options: {
       scales: {
         yAxes: [
@@ -204,6 +191,48 @@ export default {
       maintainAspectRatio: false,
     },  
   }),
+
+  
+    computed: {
+    computedData: function () {
+      return {
+        labels: [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "React/Redux",
+          "SQL",
+          "python",
+          "C",
+          "java",
+          "BootStrap",
+          "Git",
+        ],
+
+        datasets: [
+          {
+            label: "Bar Chart",
+            borderWidth: 1,
+            backgroundColor: "#FF8A65",
+            borderColor: "#FF8A65",
+            pointBorderColor: "#FF8A65",
+            data: [
+              this.chartDataSet.HTML,
+              this.chartDataSet.CSS,
+              this.chartDataSet.JavaScript,
+              this.chartDataSet["React/Redux"],
+              this.chartDataSet.SQL,
+              this.chartDataSet.python,
+              this.chartDataSet.C,
+              this.chartDataSet.java,
+              this.chartDataSet.BootStrap,
+              this.chartDataSet.Git,
+            ],
+          },
+        ],
+      };
+    }
+  },
   
   methods: {
     randomize: function () {
