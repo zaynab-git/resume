@@ -133,7 +133,7 @@
       </button>
       <bar-chart
         ref="bar"
-        :chartData="dataSet"
+        :chartData="chartDataSet"
         :options="options"
         class="white--text mx-5 mt-10"
       ></bar-chart>
@@ -150,7 +150,7 @@ export default {
     BarChart,
   },
   data: () => ({
-    ChartData: {
+    chartDataSet: {
       HTML: 12,
       CSS: 12,
       JavaScript: 6,
@@ -162,7 +162,34 @@ export default {
       BootStrap: 6,
       Git: 6,
     },
-    options: {
+
+    // chartData:{
+    //     labels: [
+    //       "HTML",
+    //       "CSS",
+    //       "JavaScript",
+    //       "React/Redux",
+    //       "SQL",
+    //       "python",
+    //       "C",
+    //       "java",
+    //       "BootStrap",
+    //       "Git",
+    //     ],
+
+    //     datasets: [
+    //       {
+    //         label: "Bar Chart",
+    //         borderWidth: 1,
+    //         backgroundColor: "#FF8A65",
+    //         borderColor: "#FF8A65",
+    //         pointBorderColor: "#FF8A65",
+    //         data: [12,12,6,6,12,12,6,6,12,6,6
+    //         ],
+    //       },
+    //     ],
+    //   },
+      options: {
       scales: {
         yAxes: [
           {
@@ -187,52 +214,13 @@ export default {
       },
       responsive: true,
       maintainAspectRatio: false,
-    },
+    },  
   }),
-  computed: {
-    dataSet: function () {
-      return {
-        labels: [
-          "HTML",
-          "CSS",
-          "JavaScript",
-          "React/Redux",
-          "SQL",
-          "python",
-          "C",
-          "java",
-          "BootStrap",
-          "Git",
-        ],
-
-        datasets: [
-          {
-            label: "Bar Chart",
-            borderWidth: 1,
-            backgroundColor: "#FF8A65",
-            borderColor: "#FF8A65",
-            pointBorderColor: "#FF8A65",
-            data: [
-              this.ChartData.HTML,
-              this.ChartData.CSS,
-              this.ChartData.JavaScript,
-              this.ChartData["React/Redux"],
-              this.ChartData.SQL,
-              this.ChartData.python,
-              this.ChartData.C,
-              this.ChartData.java,
-              this.ChartData.BootStrap,
-              this.ChartData.Git,
-            ],
-          },
-        ],
-      };
-    },
-  },
+  
   methods: {
     randomize: function () {
-      for (let item in this.ChartData) {
-        this.ChartData[item] = Math.floor(Math.random() * 12);
+      for (let item in this.chartDataSet) {
+        this.chartDataSet[item] = Math.floor(Math.random() * 12);
       }
     },
   },
