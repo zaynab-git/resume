@@ -9,7 +9,7 @@
             min-width="150"
             max-height="150"
             max-width="150"
-            :src="require('../assets/zeynab.jpg')"
+            :src = "require(`../assets/${this.image}.jpg`)"
           ></v-img>
         </v-col>
 
@@ -24,7 +24,7 @@
               text-center text-sm-left text-sm-h3
             "
           >
-            ZEYNAB HEYDARZADEH
+            {{name}}
           </h1>
           <h4
             class="
@@ -34,7 +34,7 @@
               text--darken-4 text-center text-sm-left text-sm-h6
             "
           >
-            B.SC. STUDENT IN COMPUTER ENGINEERING
+            B.SC. STUDENT IN  {{ major }}
           </h4>
         </v-col>
       </v-row>
@@ -53,9 +53,7 @@
             PROFILE
           </h2>
           <p class="mt-5 white--text text-center text-sm-left">
-            I am an enthusiastic, responsible and hard working person. I am able
-            to work well both in a team environment as well as using own
-            initiative.
+            {{profile}}
           </p>
         </v-col>
 
@@ -107,7 +105,7 @@
             EDUCATION
           </h2>
           <p class="mt-5 white--text text-center text-sm-left">
-            B.Sc. in computer engineering at Amirkabir university of technology.
+            {{education}}
           </p>
         </v-col>
 
@@ -146,22 +144,12 @@ import BarChart from "../components/BarChart.vue";
 
 export default {
   name: "Resume",
+  props: ["name","image","chartDataSet","major","profile","education"],
   components: {
     BarChart,
   },
   data: () => ({
-    chartDataSet: {
-      HTML: 12,
-      CSS: 12,
-      JavaScript: 6,
-      "React/Redux": 6,
-      SQL: 12,
-      python: 12,
-      C: 6,
-      java: 12,
-      BootStrap: 6,
-      Git: 6,
-    },
+    
 
     // chartData:{
     //     labels: [
