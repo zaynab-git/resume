@@ -1,5 +1,6 @@
 <template>
-  <div style="width: 200px; margin: auto;">
+  <div>
+    <div style="width: 200px; margin: auto;">
     
      <v-combobox
         id="mycombox"
@@ -7,7 +8,7 @@
         :items="items"
         single-line
         label="Search for a resume"
-    >
+      >
     <template v-slot:item="data">
 
       <v-row class="pa-3" v-on:click="select_resume(data.item)">
@@ -26,10 +27,17 @@
     </template>
 
     </v-combobox>
-    
+    </div>
+    <div>
+      <router-view />
+    </div>
+
 
 
   </div>
+  
+
+
   
 </template>s
 
