@@ -1,4 +1,5 @@
 <template>
+  <div class="grey darken-3">
   <v-container class="indigo darken-4 px-0 pt-10">
     <div class="deep-orange lighten-2 px-16">
       <v-row class="align-center justify-center py-5">
@@ -137,6 +138,7 @@
       ></bar-chart>
     </div>
   </v-container>
+  </div>
 </template>
 
 <script>

@@ -2,6 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import Resume from "../views/Resume.vue";
+import About from "../views/About.vue";
 
 Vue.use(VueRouter);
 
@@ -12,7 +13,12 @@ const routes = [
     component: Home,
   },
   {
-    path: "/resume_1",
+    path: "/about",
+    name: "About",
+    component: About,
+  },
+  {
+    path: "/about/resume_1",
     name: "Resume_1",
     component: Resume,
     props: {
@@ -24,7 +30,7 @@ const routes = [
     }
   },
   {
-    path: "/resume_2",
+    path: "/about/resume_2",
     name: "Resume_2",
     component: Resume,
     props: {

@@ -1,17 +1,63 @@
 <template>
-  <div class="grey darken-3">
-    <Resume/>
+  <div style="width: 200px; margin: auto;">
+    
+     <v-combobox
+        id="mycombox"
+        v-model="select"
+        :items="items"
+        single-line
+        label="Search for a resume"
+    >
+    <template v-slot:item="data">
+
+      <v-row class="pa-3" v-on:click="select_resume(data.item)">
+        <v-img
+            style="border: 3px solid #1a237e"
+            class="rounded-circle pa-5"
+            min-width="30"
+            max-height="30"
+            max-width="30"
+            :src = "require(`../assets/${images[data.item]}.jpg`)"
+          ></v-img>
+
+          <p class="ml-5 mt-3">{{ data.item }}</p>
+      </v-row>  
+
+    </template>
+
+    </v-combobox>
+    
+
+
   </div>
   
 </template>s
 
 <script>
-  import Resume from "../components/Resume";
 
 export default {
   name: "About",
-  components: {
-     Resume,
-   },
+  data: () => ({
+    select: [''],
+    items: [
+      'Resume 1',
+      'Resume 2'
+    ],
+    images: {
+      'Resume 1': 'zeynab',
+      'Resume 2': 'samane'
+    },
+    routers: {
+      'Resume 1': 'Resume_1',
+      'Resume 2': 'Resume_2'
+    }
+    
+  }),
+
+  methods: {
+    select_resume: function(name){
+      this.$router.push({name: this.routers[name]})
+    }
+  },
 };
 </script>
