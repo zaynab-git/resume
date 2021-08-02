@@ -53,15 +53,17 @@ export default {
       'Resume 2': 'samane'
     },
     routers: {
-      'Resume 1': 'Resume_1',
-      'Resume 2': 'Resume_2'
-    }
+      'Resume 1': 'Resume1',
+      'Resume 2': 'Resume2'
+    },
     
   }),
 
   methods: {
     select_resume: function(name){
-      this.$router.push({name: this.routers[name]})
+      if(this.routers[name] != this.$route.name){
+        this.$router.push({name: this.routers[name]})
+      }
     }
   },
 };

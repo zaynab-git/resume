@@ -3,7 +3,7 @@
   <v-container class="indigo darken-4 px-0 pt-10">
     <div class="deep-orange lighten-2 px-16">
       <v-row class="align-center justify-center py-5">
-        <v-col class="flex-grow-0 flex-shrink-0">
+        <!-- <v-col class="flex-grow-0 flex-shrink-0">
           <v-img
             style="border: 3px solid #1a237e"
             class="rounded-circle pa-16"
@@ -12,7 +12,7 @@
             max-width="150"
             :src = "require(`../assets/${this.image}.jpg`)"
           ></v-img>
-        </v-col>
+        </v-col> -->
 
         <v-col
           class="flex-grow-1 flex-shrink-0"
@@ -25,7 +25,7 @@
               text-center text-sm-left text-sm-h3
             "
           >
-            {{name}}
+            {{this.$route.name == 'Resume1' ?  $t("resumes.resume1.name") : $t("resumes.resume2.name")}}
           </h1>
           <h4
             class="
@@ -35,7 +35,7 @@
               text--darken-4 text-center text-sm-left text-sm-h6
             "
           >
-            B.SC. STUDENT IN  {{ major }}
+            {{this.$route.name == 'Resume1' ? $t("resumes.resume1.major") : $t("resumes.resume2.major") }}
           </h4>
         </v-col>
       </v-row>
@@ -54,7 +54,7 @@
             {{ $t("resumes.profile") }}
           </h2>
           <p class="mt-5 white--text text-center text-sm-left">
-            {{profile}}
+            {{this.$route.name == 'Resume1' ?  $t("resumes.resume1.profile") : $t("resumes.resume2.profile") }}
           </p>
         </v-col>
 
@@ -103,10 +103,10 @@
               text--lighten-2 text-center text-sm-left
             "
           >
-            EDUCATION
+            {{ $t("resumes.education") }}
           </h2>
           <p class="mt-5 white--text text-center text-sm-left">
-            {{education}}
+            {{this.$route.name == 'Resume1' ? $t("resumes.resume1.education")  :  $t("resumes.resume2.education")}}
           </p>
         </v-col>
 
@@ -122,13 +122,13 @@
           text--lighten-2 text-center text-sm-left
         "
       >
-        PROGRAMMING LANGUAGES/SKILSS
+        {{ $t("resumes.skills") }}
       </h2>
       <button
         class="deep-orange lighten-2 px-3 py-1 indigo--text text--darken-4 my-5"
         @click="randomize()"
       >
-        Randomize The Bar Chart Numbers
+        {{ $t("resumes.randomize") }}
       </button>
       <bar-chart
         ref="bar"
@@ -146,7 +146,6 @@ import BarChart from "../components/BarChart.vue";
 
 export default {
   name: "Resume",
-  props: ["name","image","major","profile","education"],
   components: {
     BarChart,
   },

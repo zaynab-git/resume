@@ -6,13 +6,21 @@
     "resumes": {
         "profile": "PROFILE",
         "contact": "CONTACT",
-        "resume-1":{
+        "education": "EDUCATION",
+        "skills": "PROGRAMMING LANGUAGES/SKILSS",
+        "randomize": "Randomize The Bar Chart Numbers",
+        "resume1":{
             "name": "ZEYNAB HEYDARZADEH",
-            "major": "B.SC. STUDENT IN COMPUTER ENGINEERING"
+            "major": "B.SC. STUDENT IN COMPUTER ENGINEERING",
+            "education": "B.Sc. in computer engineering at Amirkabir university of technology",
+            "profile": "I am an enthusiastic, responsible and hard working person. I am able to work well both in a team environment as well as using own initiative."
         },
-        "resume-2":{
+        "resume2":{
             "name": "SAMANE SHARIATI",
-            "major": "B.SC. STUDENT IN CIVIL ENGINEERING"
+            "major": "B.SC. STUDENT IN CIVIL ENGINEERING",
+            "education": "B.Sc. in civil engineering at Amirkabir university of technology",
+            "profile": "A self-starter and quick learner. Versatile skill set with experience in customer service, sales, and written and oral communication. Received multiple awards for excellence in customer service."
+    
         }
     }
     
