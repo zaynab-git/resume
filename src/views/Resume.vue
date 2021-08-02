@@ -51,7 +51,7 @@
               text--lighten-2 text-center text-sm-left
             "
           >
-            PROFILE
+            {{ $t("resumes.profile") }}
           </h2>
           <p class="mt-5 white--text text-center text-sm-left">
             {{profile}}
@@ -67,7 +67,7 @@
               pb-5
             "
           >
-            CONTACT
+            {{ $t("resumes.contact") }}
           </h2>
           <v-row class="align-start justify-center justify-sm-start ml-sm-1">
             <v-icon color="deep-orange lighten-2 "> mdi-phone </v-icon>

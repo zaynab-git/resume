@@ -1,3 +1,19 @@
 {
-    "message": "hello world"
+    "nav-bar": {
+        "home": "Home",
+        "about": "About"
+    },
+    "resumes": {
+        "profile": "PROFILE",
+        "contact": "CONTACT",
+        "resume-1":{
+            "name": "ZEYNAB HEYDARZADEH",
+            "major": "B.SC. STUDENT IN COMPUTER ENGINEERING"
+        },
+        "resume-2":{
+            "name": "SAMANE SHARIATI",
+            "major": "B.SC. STUDENT IN CIVIL ENGINEERING"
+        }
+    }
+    
 }

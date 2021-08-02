@@ -43,7 +43,7 @@
 export default {
   name: "About",
   data: () => ({
-    select: [''],
+    select: '',
     items: [
       'Resume 1',
       'Resume 2'
