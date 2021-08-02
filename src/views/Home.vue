@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="d-flex justify-center pa-5">this is home page</h1>
+    <h1 class="d-flex justify-center pa-5">{{ $t("home") }}</h1>
   </div>
   
 </template>

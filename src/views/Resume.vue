@@ -3,16 +3,16 @@
   <v-container class="indigo darken-4 px-0 pt-10">
     <div class="deep-orange lighten-2 px-16">
       <v-row class="align-center justify-center py-5">
-        <!-- <v-col class="flex-grow-0 flex-shrink-0">
+        <v-col class="flex-grow-0 flex-shrink-0">
           <v-img
             style="border: 3px solid #1a237e"
             class="rounded-circle pa-16"
             min-width="150"
             max-height="150"
             max-width="150"
-            :src = "require(`../assets/${this.image}.jpg`)"
+            :src = "this.$route.name == 'Resume1' ? require(`../assets/zeynab.jpg`) : require(`../assets/samane.jpg`)"
           ></v-img>
-        </v-col> -->
+        </v-col>
 
         <v-col
           class="flex-grow-1 flex-shrink-0"
