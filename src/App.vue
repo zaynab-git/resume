@@ -1,7 +1,7 @@
 <template>
   <v-app>
 
-    {{ $t("message.hello") }}
+    <p>{{ $t("message") }}</p>
 
     <div class=" d-flex align-center justify-center grey lighten-2">
 
