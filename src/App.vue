@@ -1,5 +1,8 @@
 <template>
   <v-app>
+
+    {{ $t("message.hello") }}
+
     <div class=" d-flex align-center justify-center grey lighten-2">
 
       <router-link class="pa-5" to="/">Home</router-link>

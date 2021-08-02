@@ -31,9 +31,6 @@
     <div>
       <router-view />
     </div>
-
-
-
   </div>
   
 
